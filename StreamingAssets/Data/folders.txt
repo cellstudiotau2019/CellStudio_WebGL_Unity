@@ -1,0 +1,6 @@
+# Auto-generated folder manifest
+# Generated on: 2025-07-14 14:51:17
+# Found 1 valid simulation folders
+# Lines starting with # are ignored
+
+Run 01 - 432000 Bioticks (120 Hours), Macrophage - 50, Fibroblast - 50
