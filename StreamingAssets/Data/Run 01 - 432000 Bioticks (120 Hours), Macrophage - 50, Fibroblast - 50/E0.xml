@@ -1,0 +1,487 @@
+<?xml version="1.0"?>
+<Model_data>
+	<Model>
+		<name>ExampleReduced3</name>
+		<simulation_duration value_type="scalar">432000</simulation_duration>
+		<random_seed value_type="scalar">-1</random_seed>
+		<tick_update_interval value_type="scalar">1200</tick_update_interval>
+		<lesion_injection_base_amount value_type="scalar">1.875f</lesion_injection_base_amount>
+		<is_recruiting value_type="scalar">false</is_recruiting>
+		<is_lesion_intersection value_type="scalar">true</is_lesion_intersection>
+		<is_cylinder_intersection value_type="scalar">true</is_cylinder_intersection>
+		<should_stop_on_cylinder value_type="scalar">false</should_stop_on_cylinder>
+	</Model>
+	<Environments>
+		<array_element_0>
+			<CylindersPath>./../scripts/Cylinders.xml</CylindersPath>
+			<CylindersShift>
+				<x value_type="scalar">250</x>
+				<y value_type="scalar">0</y>
+				<z value_type="scalar">250</z>
+			</CylindersShift>
+			<name>Area 1</name>
+			<ID>0</ID>
+			<area_size>
+				<x value_type="scalar">1000</x>
+				<y value_type="scalar">500</y>
+				<z value_type="scalar">1000</z>
+			</area_size>
+			<area_origin>
+				<x value_type="scalar">0</x>
+				<y value_type="scalar">0</y>
+				<z value_type="scalar">0</z>
+			</area_origin>
+			<area_step>
+				<x value_type="scalar">50</x>
+				<y value_type="scalar">50</y>
+				<z value_type="scalar">50</z>
+			</area_step>
+		</array_element_0>
+	</Environments>
+	<Soluble_molecules>
+		<array_element_0>
+			<area>Area 1</area>
+			<name>SOCSExpressed</name>
+			<ID>0</ID>
+			<regionID>0</regionID>
+			<diffusion_coefficient value_type="scalar">15</diffusion_coefficient>
+			<basic_concentration value_type="scalar">0</basic_concentration>
+			<decay_rate value_type="scalar">0.03</decay_rate>
+		</array_element_0>
+		<array_element_1>
+			<area>Area 1</area>
+			<name>AIMExpressed</name>
+			<ID>1</ID>
+			<regionID>0</regionID>
+			<diffusion_coefficient value_type="scalar">17</diffusion_coefficient>
+			<basic_concentration value_type="scalar">0</basic_concentration>
+			<decay_rate value_type="scalar">0.03</decay_rate>
+		</array_element_1>
+		<array_element_2>
+			<area>Area 1</area>
+			<name>PIMExpressed</name>
+			<ID>2</ID>
+			<regionID>0</regionID>
+			<diffusion_coefficient value_type="scalar">30</diffusion_coefficient>
+			<basic_concentration value_type="scalar">0</basic_concentration>
+			<decay_rate value_type="scalar">0.03</decay_rate>
+		</array_element_2>
+	</Soluble_molecules>
+	<Cells>
+		<array_element_0>
+			<cell_type>APC</cell_type>
+			<ID>0</ID>
+			<regionID>0</regionID>
+			<cell_population_size value_type="scalar">0</cell_population_size>
+			<cell_size_distribution value_type="distribution_Uniform">
+				<min>6</min>
+				<max>10</max>
+			</cell_size_distribution>
+			<cell_speed_distribution value_type="distribution_Uniform">
+				<min>1</min>
+				<max>2</max>
+			</cell_speed_distribution>
+			<cell_death_distribution value_type="distribution_Uniform">
+				<min>0.000010</min>
+				<max>0.000010</max>
+			</cell_death_distribution>
+			<cell_proliferation_distribution value_type="distribution_Uniform">
+				<min>0</min>
+				<max>0</max>
+			</cell_proliferation_distribution>
+			<scan_time_distribution value_type="distribution_Normal">
+				<mean>-1</mean>
+				<sigma>10</sigma>
+			</scan_time_distribution>
+			<refractary_time_distribution value_type="distribution_Normal">
+				<mean>1</mean>
+				<sigma>0.01</sigma>
+			</refractary_time_distribution>
+			<max_number_in_conglomerate value_type="scalar">1</max_number_in_conglomerate>
+			<scan_velocity value_type="scalar">0</scan_velocity>
+			<cell_distribution>Random</cell_distribution>
+			<cell_cluster_3d_shape>Cloud</cell_cluster_3d_shape>
+			<cell_cluster_center>
+				<x value_type="scalar">000</x>
+				<y value_type="scalar">000</y>
+				<z value_type="scalar">000</z>
+			</cell_cluster_center>
+			<adhesive_wall>
+				<U value_type="scalar">0</U>
+				<D value_type="scalar">1</D>
+				<R value_type="scalar">0</R>
+				<L value_type="scalar">0</L>
+				<F value_type="scalar">0</F>
+				<B value_type="scalar">0</B>
+			</adhesive_wall>
+			<parameter_set>
+				<k_IFN value_type="scalar">0.0001</k_IFN>
+				<kPDLIn value_type="scalar">0.000111</kPDLIn>
+				<kPDLEx value_type="scalar">0.0000833</kPDLEx>
+				<kCD80In value_type="scalar">0.000111</kCD80In>
+				<kCD80Ex value_type="scalar">0.0000833</kCD80Ex>
+			</parameter_set>
+			<receptors>
+				<array_element_0>
+					<ID>0</ID>
+					<receptor_type>PD-L1</receptor_type>
+					<receptor_expression_distibution value_type="distribution_Normal">
+						<mean>0.6</mean>
+						<sigma>0.1</sigma>
+					</receptor_expression_distibution>
+					<receptor_binding_distribution value_type="distribution_Normal">
+						<mean>0.7</mean>
+						<sigma>0.1</sigma>
+					</receptor_binding_distribution>
+				</array_element_0>
+				<array_element_1>
+					<ID>1</ID>
+					<receptor_type>CD80</receptor_type>
+					<receptor_expression_distibution value_type="distribution_Normal">
+						<mean>0.6</mean>
+						<sigma>0.1</sigma>
+					</receptor_expression_distibution>
+					<receptor_binding_distribution value_type="distribution_Normal">
+						<mean>0.1</mean>
+						<sigma>0.01</sigma>
+					</receptor_binding_distribution>
+				</array_element_1>
+			</receptors>
+		</array_element_0>
+		<array_element_1>
+			<cell_type>CD8+ T-Cell</cell_type>
+			<ID>1</ID>
+			<regionID>0</regionID>
+			<cell_population_size value_type="scalar">0</cell_population_size>
+			<cell_size_distribution value_type="distribution_Uniform">
+				<min>3</min>
+				<max>4</max>
+			</cell_size_distribution>
+			<cell_speed_distribution value_type="distribution_Uniform">
+				<min>1</min>
+				<max>2</max>
+			</cell_speed_distribution>
+			<cell_death_distribution value_type="distribution_Uniform">
+				<min>-1</min>
+				<max>-1</max>
+			</cell_death_distribution>
+			<cell_proliferation_distribution value_type="distribution_Uniform">
+				<min>0</min>
+				<max>0</max>
+			</cell_proliferation_distribution>
+			<scan_time_distribution value_type="distribution_Normal">
+				<mean>500</mean>
+				<sigma>10</sigma>
+			</scan_time_distribution>
+			<refractary_time_distribution value_type="distribution_Normal">
+				<mean>75000</mean>
+				<sigma>5000</sigma>
+			</refractary_time_distribution>
+			<max_number_in_conglomerate value_type="scalar">3</max_number_in_conglomerate>
+			<scan_velocity value_type="scalar">10</scan_velocity>
+			<cell_distribution>Random</cell_distribution>
+			<cell_cluster_3d_shape>Cloud</cell_cluster_3d_shape>
+			<cell_cluster_center>
+				<x value_type="scalar">000</x>
+				<y value_type="scalar">000</y>
+				<z value_type="scalar">000</z>
+			</cell_cluster_center>
+			<adhesive_wall>
+				<U value_type="scalar">0</U>
+				<D value_type="scalar">1</D>
+				<R value_type="scalar">0</R>
+				<L value_type="scalar">0</L>
+				<F value_type="scalar">0</F>
+				<B value_type="scalar">0</B>
+			</adhesive_wall>
+			<parameter_set>
+				<synapse_delay value_type="scalar">3000</synapse_delay>
+				<kA_Inhib_Time value_type="scalar">4000</kA_Inhib_Time>
+				<kA_Inhib_Const value_type="scalar">0.00004</kA_Inhib_Const>
+				<kF1 value_type="scalar">2</kF1>
+				<kF1_exp value_type="scalar">-10</kF1_exp>
+				<kF1_Pd1 value_type="scalar">0.8</kF1_Pd1>
+				<kF2 value_type="scalar">2</kF2>
+				<kA_Inhib value_type="scalar">2.3</kA_Inhib>
+				<kA_Cost value_type="scalar">1.2</kA_Cost>
+				<kA_IFN value_type="scalar">0.2</kA_IFN>
+				<kA_aCD3 value_type="scalar">1</kA_aCD3>
+				<beta value_type="scalar">1.5</beta>
+				<teta value_type="scalar">.3</teta>
+				<kPDIn_Act value_type="scalar">0.00005</kPDIn_Act>
+				<kPDIn_Ex value_type="scalar">0.0002</kPDIn_Ex>
+				<kPDIn_Const value_type="scalar">1</kPDIn_Const>
+				<kIFNIn_Act value_type="scalar">0.0004</kIFNIn_Act>
+				<kIFNIn_Ex value_type="scalar">0.005</kIFNIn_Ex>
+				<kIFNIn_Const value_type="scalar">15000</kIFNIn_Const>
+			</parameter_set>
+			<receptors>
+				<array_element_0>
+					<ID>0</ID>
+					<receptor_type>PD-1</receptor_type>
+					<receptor_expression_distibution value_type="distribution_Weibull">
+						<a>0.09</a>
+						<b>0.55</b>
+					</receptor_expression_distibution>
+					<receptor_binding_distribution value_type="distribution_Normal">
+						<mean>0.1</mean>
+						<sigma>0.000001</sigma>
+					</receptor_binding_distribution>
+				</array_element_0>
+				<array_element_1>
+					<ID>1</ID>
+					<receptor_type>CD28</receptor_type>
+					<receptor_expression_distibution value_type="distribution_Normal">
+						<mean>0.8</mean>
+						<sigma>0.1</sigma>
+					</receptor_expression_distibution>
+					<receptor_binding_distribution value_type="distribution_Normal">
+						<mean>0.5</mean>
+						<sigma>0.01</sigma>
+					</receptor_binding_distribution>
+				</array_element_1>
+			</receptors>
+		</array_element_1>
+		<array_element_2>
+			<cell_type>Macrophage</cell_type>
+			<ID>2</ID>
+			<regionID>0</regionID>
+			<cell_population_size value_type="scalar">50</cell_population_size>
+			<cell_size_distribution value_type="distribution_Uniform">
+				<min>05</min>
+				<max>15</max>
+			</cell_size_distribution>
+			<cell_speed_distribution value_type="distribution_Uniform">
+				<min>0.5</min>
+				<max>0.7</max>
+			</cell_speed_distribution>
+			<cell_death_distribution value_type="distribution_Uniform">
+				<min>0</min>
+				<max>0</max>
+			</cell_death_distribution>
+			<cell_proliferation_distribution value_type="distribution_Uniform">
+				<min>0</min>
+				<max>0</max>
+			</cell_proliferation_distribution>
+			<scan_time_distribution value_type="distribution_Normal">
+				<mean>-1</mean>
+				<sigma>10</sigma>
+			</scan_time_distribution>
+			<refractary_time_distribution value_type="distribution_Normal">
+				<mean>1</mean>
+				<sigma>0.01</sigma>
+			</refractary_time_distribution>
+			<max_number_in_conglomerate value_type="scalar">1</max_number_in_conglomerate>
+			<scan_velocity value_type="scalar">0</scan_velocity>
+			<cell_distribution>Random</cell_distribution>
+			<cell_cluster_3d_shape>Cloud</cell_cluster_3d_shape>
+			<cell_cluster_center>
+				<x value_type="scalar">0</x>
+				<y value_type="scalar">0</y>
+				<z value_type="scalar">0</z>
+			</cell_cluster_center>
+			<adhesive_wall>
+				<U value_type="scalar">0</U>
+				<D value_type="scalar">1</D>
+				<R value_type="scalar">0</R>
+				<L value_type="scalar">0</L>
+				<F value_type="scalar">0</F>
+				<B value_type="scalar">0</B>
+			</adhesive_wall>
+			<parameter_set>
+				<M1ActivationRate value_type="scalar">0.05</M1ActivationRate>
+				<M1ActHillParameter value_type="scalar">1</M1ActHillParameter>
+				<M1SOCSInfinity value_type="scalar">4</M1SOCSInfinity>
+				<M2SOCSInfinity value_type="scalar">7</M2SOCSInfinity>
+				<M1DecreaseViaAIM value_type="scalar">0.01</M1DecreaseViaAIM>
+				<M1DecreaseViaAIMHill value_type="scalar">0.4</M1DecreaseViaAIMHill>
+				<M2ActScalar value_type="scalar">0.065</M2ActScalar>
+				<M2ActHillParameter value_type="scalar">0.85</M2ActHillParameter>
+				<PIMNegativeFeedbackRate value_type="scalar">0.002</PIMNegativeFeedbackRate>
+				<AIMNegativeFeedbackRate value_type="scalar">0.003</AIMNegativeFeedbackRate>
+				<ImmuneProInflammatoryRate value_type="scalar">0.35</ImmuneProInflammatoryRate>
+				<ImmuneAntiInflammatoryRate value_type="scalar">0.85</ImmuneAntiInflammatoryRate>
+				<M1AIMInfinity value_type="scalar">0.05</M1AIMInfinity>
+				<ImmuneM1AntiInflammatoryRate value_type="scalar">0.175</ImmuneM1AntiInflammatoryRate>
+				<AIMSOCSInfinity value_type="scalar">0.01</AIMSOCSInfinity>
+				<SOCSProductionRate value_type="scalar">4</SOCSProductionRate>
+				<AIMSOCSHill value_type="scalar">5</AIMSOCSHill>
+				<ProInflammatoryDecayRate value_type="scalar">0.03</ProInflammatoryDecayRate>
+				<AntiInflammatoryDecayRate value_type="scalar">0.03</AntiInflammatoryDecayRate>
+				<SOCSDecayRate value_type="scalar">0.03</SOCSDecayRate>
+				<SigmoidF_max value_type="scalar">5.0</SigmoidF_max>
+				<Sigmoid_k value_type="scalar">0.50</Sigmoid_k>
+				<Sigmoid_T_50 value_type="scalar">10.0</Sigmoid_T_50>
+				<chemotaxisK value_type="scalar">10.0</chemotaxisK>
+			</parameter_set>
+			<variable_set>
+				<oldm1act value_type="scalar">0.0</oldm1act>
+				<M1ActivationLattice value_type="scalar">0.0</M1ActivationLattice>
+				<oldm2act value_type="scalar">0.0</oldm2act>
+				<M2ActivationLattice value_type="scalar">0.0</M2ActivationLattice>
+			</variable_set>
+			<receptors>
+				<array_element_0>
+					<ID>0</ID>
+					<receptor_type>M1</receptor_type>
+					<receptor_expression_distibution value_type="distribution_Normal">
+						<mean>0.1</mean>
+						<sigma>0.01</sigma>
+					</receptor_expression_distibution>
+					<receptor_binding_distribution value_type="distribution_Normal">
+						<mean>0.1</mean>
+						<sigma>0.01</sigma>
+					</receptor_binding_distribution>
+				</array_element_0>
+				<array_element_1>
+					<ID>1</ID>
+					<receptor_type>M2</receptor_type>
+					<receptor_expression_distibution value_type="distribution_Normal">
+						<mean>0</mean>
+						<sigma>0.5</sigma>
+					</receptor_expression_distibution>
+					<receptor_binding_distribution value_type="distribution_Normal">
+						<mean>0</mean>
+						<sigma>0.5</sigma>
+					</receptor_binding_distribution>
+				</array_element_1>
+			</receptors>
+		</array_element_2>
+		<array_element_3>
+			<cell_type>Fibroblast</cell_type>
+			<ID>3</ID>
+			<regionID>0</regionID>
+			<cell_population_size value_type="scalar">50</cell_population_size>
+			<cell_size_distribution value_type="distribution_Uniform">
+				<min>10</min>
+				<max>15</max>
+			</cell_size_distribution>
+			<cell_speed_distribution value_type="distribution_Uniform">
+				<min>0.5</min>
+				<max>0.7</max>
+			</cell_speed_distribution>
+			<cell_death_distribution value_type="distribution_Uniform">
+				<min>0</min>
+				<max>0</max>
+			</cell_death_distribution>
+			<cell_proliferation_distribution value_type="distribution_Uniform">
+				<min>0</min>
+				<max>0</max>
+			</cell_proliferation_distribution>
+			<scan_time_distribution value_type="distribution_Normal">
+				<mean>-1</mean>
+				<sigma>10</sigma>
+			</scan_time_distribution>
+			<refractary_time_distribution value_type="distribution_Normal">
+				<mean>1</mean>
+				<sigma>0.01</sigma>
+			</refractary_time_distribution>
+			<max_number_in_conglomerate value_type="scalar">1</max_number_in_conglomerate>
+			<scan_velocity value_type="scalar">0</scan_velocity>
+			<cell_distribution>Random</cell_distribution>
+			<cell_cluster_3d_shape>Cloud</cell_cluster_3d_shape>
+			<cell_cluster_center>
+				<x value_type="scalar">0</x>
+				<y value_type="scalar">0</y>
+				<z value_type="scalar">0</z>
+			</cell_cluster_center>
+			<adhesive_wall>
+				<U value_type="scalar">0</U>
+				<D value_type="scalar">1</D>
+				<R value_type="scalar">0</R>
+				<L value_type="scalar">0</L>
+				<F value_type="scalar">0</F>
+				<B value_type="scalar">0</B>
+			</adhesive_wall>
+			<parameter_set>
+				<M1ActivationRate value_type="scalar">0.05</M1ActivationRate>
+				<M1ActHillParameter value_type="scalar">1</M1ActHillParameter>
+				<M1SOCSInfinity value_type="scalar">4</M1SOCSInfinity>
+				<F1SOCSInfinity value_type="scalar">7</F1SOCSInfinity>
+				<M1DecreaseViaAIM value_type="scalar">0.01</M1DecreaseViaAIM>
+				<M1DecreaseViaAIMHill value_type="scalar">0.4</M1DecreaseViaAIMHill>
+				<F1ActScalar value_type="scalar">0.065</F1ActScalar>
+				<F1ActHillParameter value_type="scalar">0.85</F1ActHillParameter>
+				<PIMNegativeFeedbackRate value_type="scalar">0.002</PIMNegativeFeedbackRate>
+				<AIMNegativeFeedbackRate value_type="scalar">0.003</AIMNegativeFeedbackRate>
+				<ImmuneProInflammatoryRate value_type="scalar">0.35</ImmuneProInflammatoryRate>
+				<ImmuneAntiInflammatoryRate value_type="scalar">0.85</ImmuneAntiInflammatoryRate>
+				<M1AIMInfinity value_type="scalar">0.05</M1AIMInfinity>
+				<ImmuneM1AntiInflammatoryRate value_type="scalar">0.175</ImmuneM1AntiInflammatoryRate>
+				<AIMSOCSInfinity value_type="scalar">0.01</AIMSOCSInfinity>
+				<SOCSProductionRate value_type="scalar">4</SOCSProductionRate>
+				<AIMSOCSHill value_type="scalar">5</AIMSOCSHill>
+				<ProInflammatoryDecayRate value_type="scalar">0.03</ProInflammatoryDecayRate>
+				<AntiInflammatoryDecayRate value_type="scalar">0.03</AntiInflammatoryDecayRate>
+				<SOCSDecayRate value_type="scalar">0.03</SOCSDecayRate>
+				<SigmoidF_max value_type="scalar">5.0</SigmoidF_max>
+				<Sigmoid_k value_type="scalar">0.50</Sigmoid_k>
+				<Sigmoid_T_50 value_type="scalar">10.0</Sigmoid_T_50>
+				<chemotaxisK value_type="scalar">10.0</chemotaxisK>
+			</parameter_set>
+			<variable_set>
+				<oldf1act value_type="scalar">0.0</oldf1act>
+				<F1ActivationLattice value_type="scalar">0.0</F1ActivationLattice>
+			</variable_set>
+			<receptors>
+				<array_element_0>
+					<ID>0</ID>
+					<receptor_type>TLR4</receptor_type>
+					<receptor_expression_distibution value_type="distribution_Normal">
+						<mean>0.1</mean>
+						<sigma>0.01</sigma>
+					</receptor_expression_distibution>
+					<receptor_binding_distribution value_type="distribution_Normal">
+						<mean>0.1</mean>
+						<sigma>0.01</sigma>
+					</receptor_binding_distribution>
+				</array_element_0>
+				<array_element_1>
+					<ID>1</ID>
+					<receptor_type>TGF-b</receptor_type>
+					<receptor_expression_distibution value_type="distribution_Normal">
+						<mean>0.5</mean>
+						<sigma>0.05</sigma>
+					</receptor_expression_distibution>
+					<receptor_binding_distribution value_type="distribution_Normal">
+						<mean>0.6</mean>
+						<sigma>0.05</sigma>
+					</receptor_binding_distribution>
+				</array_element_1>
+			</receptors>
+		</array_element_3>
+	</Cells>
+	<Rules>
+		<array_element_0>
+			<ID>1</ID>
+			<cooldown_time value_type="scalar">60</cooldown_time>
+			<events>
+				<array_element_0>
+					<ID>0</ID>
+					<type>Receptor - receptor binding</type>
+					<minimum_receptors_required value_type="scalar">50</minimum_receptors_required>
+					<bound_receptors_side_1 value_type="scalar">0</bound_receptors_side_1>
+					<bound_receptors_side_2 value_type="scalar">0</bound_receptors_side_2>
+					<cell_side_1 value_type="scalar">0</cell_side_1>
+					<cell_side_2 value_type="scalar">1</cell_side_2>
+				</array_element_0>
+				<array_element_1>
+					<ID>1</ID>
+					<type>Receptor - receptor binding</type>
+					<minimum_receptors_required value_type="scalar">50</minimum_receptors_required>
+					<bound_receptors_side_1 value_type="scalar">1</bound_receptors_side_1>
+					<bound_receptors_side_2 value_type="scalar">1</bound_receptors_side_2>
+					<cell_side_1 value_type="scalar">0</cell_side_1>
+					<cell_side_2 value_type="scalar">1</cell_side_2>
+				</array_element_1>
+			</events>
+		</array_element_0>
+	</Rules>
+	<Advanced>
+		<server_port />
+		<path />
+		<run_source>Local</run_source>
+		<string_matching>10</string_matching>
+		<server_host />
+	</Advanced>
+</Model_data>
